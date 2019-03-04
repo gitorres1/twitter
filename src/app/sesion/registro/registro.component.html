@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title style="text-align: center">Registro</mat-card-title>
+    </mat-card-header>
+    <mat-form-field class="example-full-width">
+        <input [(ngModel)]="usr.nombre" matInput placeholder="Nombre">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input [(ngModel)]="usr.apellido" matInput placeholder="Apellido">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input [(ngModel)]="usr.correo" type="email" matInput placeholder="Correo">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input [(ngModel)]="usr.celular" type="number" matInput placeholder="Celular">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input [(ngModel)]="usr.fecha" type="date" matInput placeholder="Fecha de Nacimiento">
+    </mat-form-field>
+    <button mat-button color="primary">Registrarse</button>
+    <button mat-button color="primary">Cancelar</button>
+</mat-card>
+<br>
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>Datos de Usuario</mat-card-title>
+    </mat-card-header>
+    <br>
+    <mat-card-content>
+        <h2 style="text-align: left">Usuario: {{usr.nombre}} {{usr.apellido}}</h2>
+        <h3 style="text-align: left">Correo: {{usr.correo}}</h3>
+        <h3 style="text-align: left">Celular: {{usr.celular}}</h3>
+        <h3 style="text-align: left">Fecha de Nacimiento: {{usr.fecha | date}}</h3>
+    </mat-card-content>
+</mat-card>
