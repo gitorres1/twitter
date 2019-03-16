@@ -8,7 +8,7 @@ import { Usuario } from 'src/app/model/Usuario';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor() { 
+  constructor() {
 
     this.usr = {
       nombre: 'Zulay',

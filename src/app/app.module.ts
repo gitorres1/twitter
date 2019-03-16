@@ -11,12 +11,16 @@ import { MatCardModule } from '@angular/material/card';
 import { TweetsComponent } from './tweets/tweets.component';
 import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
+import { DetalleTweetComponent } from './sesion/detalle-tweet/detalle-tweet.component';
+import { ListaTweetComponent } from './sesion/lista-tweet/lista-tweet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
     TweetsComponent,
+    DetalleTweetComponent,
+    ListaTweetComponent,
   ],
   imports: [
     BrowserModule,
