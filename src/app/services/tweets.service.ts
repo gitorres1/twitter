@@ -28,7 +28,16 @@ export class TweetsService {
   public getUsuario(id: string): Observable<Usuario> {
 
     const body = new HttpParams().set('id', id);
-    return this.http.get<Usuario>(environment.urlConsultaUsuario, {params: body});
+    return this.http.get<Usuario>(environment.urlConsultaUsuario, { params: body });
+  }
+
+  public addUsuario(usuario: Usuario) {
+    const body = new HttpParams().set('nombreUsuario', usuario.nombreUsuario + '')
+                .set('apellidoUsuario', usuario.apellidoUsuario + '')
+                .set('claveUsuario', usuario.claveUsuario + '')
+                .set('correoUsuario', usuario.correoUsuario + '')
+                .set('celularUsuario', usuario.celularUsuario);
+    return this.http.post(environment.urlInsertarUsuario, body).subscribe();
   }
 }
 
