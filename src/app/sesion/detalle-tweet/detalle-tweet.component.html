@@ -3,7 +3,7 @@
         <div mat-card-avatar>
             <img mat-card-avatar src="https://picsum.photos/200/300/?random" alt="Photo of a Shiba Inu">
         </div>
-        <a [routerLink]="['/usuario']">@{{mySelectedTweet.usuario.nombreUsuario}} {{mySelectedTweet.usuario.apellidoUsuario}}</a>
+        <a [routerLink]="['/usuario', mySelectedTweet.usuario.idUsuario]">@{{mySelectedTweet.usuario.nombreUsuario}} {{mySelectedTweet.usuario.apellidoUsuario}}</a>
         <mat-card-subtitle>{{mySelectedTweet.idPublicacion}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>

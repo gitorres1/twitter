@@ -5,7 +5,7 @@ import { ListaTweetComponent } from './sesion/lista-tweet/lista-tweet.component'
 
 const routes: Routes = [
   { path: 'home', component: ListaTweetComponent },
-  { path: 'usuario', component: UsuarioComponent },
+  { path: 'usuario/:id', component: UsuarioComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
