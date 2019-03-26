@@ -9,12 +9,6 @@ import { Tweet } from '../../model/Tweet';
 export class DetalleTweetComponent implements OnInit {
 
   constructor() {
-
-    this.mySelectedTweet = {
-      id: 2,
-      autor: 'Damian',
-      texto: 'Mi primer tweet'
-    };
    }
 
   @Input() mySelectedTweet: Tweet;

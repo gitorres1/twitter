@@ -8,13 +8,10 @@
         <mat-form-field class="full-width">
             <input matInput placeholder="Autor" [(ngModel)]="autorT">
         </mat-form-field>
-        <mat-form-field class="full-width">
-            <input matInput placeholder="ID" type="number" [(ngModel)]="idT">
-        </mat-form-field>
         <p>
             <mat-form-field class="full-width">
                 <textarea matInput placeholder="Tweet" [(ngModel)]="textoT">
-    </textarea>
+  </textarea>
             </mat-form-field>
         </p>
         <button mat-raised-button (click)="addnewTweet()" color="primary">Insertar</button>

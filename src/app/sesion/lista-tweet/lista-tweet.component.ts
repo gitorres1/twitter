@@ -12,7 +12,6 @@ export class ListaTweetComponent implements OnInit {
   miTweet: Tweet;
   misTweets: Array<Tweet>;
   autorT: string;
-  idT: number;
   textoT: string;
 
   constructor(private tweetService: TweetsService) {
@@ -27,10 +26,9 @@ export class ListaTweetComponent implements OnInit {
   }
 
   addnewTweet() {
-    const tweetAux = new Tweet();
-    tweetAux.autor = this.autorT,
-      tweetAux.id = this.idT;
-    tweetAux.texto = this.textoT;
-    this.misTweets.push(tweetAux);
+    console.log('Agregar Tweet');
+    this.miTweet.contenidoPublicacion = this.textoT;
+    this.miTweet.usuario = this.autorT;
+    this.tweetService.insertTweet(this.miTweet);
   }
 }

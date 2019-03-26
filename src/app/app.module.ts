@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { DetalleTweetComponent } from './sesion/detalle-tweet/detalle-tweet.component';
 import { ListaTweetComponent } from './sesion/lista-tweet/lista-tweet.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuarioComponent } from './sesion/usuario/usuario.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { ListaTweetComponent } from './sesion/lista-tweet/lista-tweet.component'
     TweetsComponent,
     DetalleTweetComponent,
     ListaTweetComponent,
+    UsuarioComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { ListaTweetComponent } from './sesion/lista-tweet/lista-tweet.component'
     MatInputModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    HttpClientModule,
     MatCardModule,
     FormsModule,
     MatDividerModule
