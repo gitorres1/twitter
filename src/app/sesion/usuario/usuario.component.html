@@ -13,3 +13,8 @@
         <button [routerLink]="['/home']" mat-button>Regresar</button>
     </mat-card-actions>
 </mat-card>
+<div *ngFor="let tweet of tweets">
+  <app-detalle-tweet [mySelectedTweet]="tweet"></app-detalle-tweet>
+  <br>
+</div>
+

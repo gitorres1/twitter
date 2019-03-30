@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Tweet } from '../model/Tweet';
-import { Observable } from 'rxjs';
+import { Observable, observable } from 'rxjs';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Usuario } from '../model/Usuario';
@@ -39,5 +39,12 @@ export class TweetsService {
                 .set('celularUsuario', usuario.celularUsuario);
     return this.http.post(environment.urlInsertarUsuario, body).subscribe();
   }
+
+  public getPublicacionUsuario(id: string): Observable<Tweet[]> {
+
+    const body = new HttpParams().set('idUsuario', id);
+    return this.http.get<Tweet[]>(environment.urlConsultarTweetsUsuario, {params: body});
+  }
+
 }
 
