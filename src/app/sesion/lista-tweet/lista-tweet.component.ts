@@ -25,10 +25,5 @@ export class ListaTweetComponent implements OnInit {
   ngOnInit() {
   }
 
-  addnewTweet() {
-    console.log('Agregar Tweet');
-    this.miTweet.contenidoPublicacion = this.textoT;
-    this.miTweet.usuario = this.autorT;
-    this.tweetService.insertTweet(this.miTweet);
-  }
+ 
 }

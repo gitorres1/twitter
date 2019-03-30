@@ -1,3 +1,26 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <span>Twitter</span>
+        <span class="menu-spacer"></span>
+        <button mat-button (click)="menu.toggle()">
+            <mat-icon class="menu-icon" aria-hidden="false" aria-label="Menu Icon">menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #menu mode="side" closed class="side-container">
+        <img width="100%" height="100" alt="Twitter Logo" src="../assets/img/twitter.png.png">
+        <button mat-button [routerLink]="['/home']" >
+            <mat-icon class="menu-icon" aria-hidden="false" aria-label="Menu Icon">visibility</mat-icon>
+            <span>Ver Tweets</span>
+        </button>
+        <button mat-button [routerLink]="['insertar']" >
+            <mat-icon class="menu-icon" aria-hidden="false" aria-label="Menu Icon">create</mat-icon>
+            <span>Crear Tweet</span>
+        </button>
+    </mat-sidenav>
+</mat-sidenav-container>
+
 <div class="example-button-row">
     <router-outlet></router-outlet>
 </div>

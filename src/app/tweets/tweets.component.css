@@ -1,0 +1,16 @@
+.form {
+  min-width: auto;
+  max-width: auto;
+  width: auto;
+}
+
+.full-width {
+  width: 100%;
+  margin: auto;
+}
+
+.card {
+  max-width: 50%;
+  margin: auto;
+  text-align: center;
+}

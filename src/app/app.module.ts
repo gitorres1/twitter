@@ -15,6 +15,9 @@ import { DetalleTweetComponent } from './sesion/detalle-tweet/detalle-tweet.comp
 import { ListaTweetComponent } from './sesion/lista-tweet/lista-tweet.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsuarioComponent } from './sesion/usuario/usuario.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { UsuarioComponent } from './sesion/usuario/usuario.component';
     HttpClientModule,
     MatCardModule,
     FormsModule,
-    MatDividerModule
+    MatDividerModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

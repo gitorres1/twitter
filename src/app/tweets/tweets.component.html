@@ -1,0 +1,12 @@
+<mat-card class="card">
+    <mat-form-field class="full-width">
+        <input matInput placeholder="Autor" [(ngModel)]="autorT">
+    </mat-form-field>
+    <p>
+        <mat-form-field class="full-width">
+            <textarea matInput placeholder="Tweet" [(ngModel)]="textoT"></textarea>
+        </mat-form-field>
+    </p>
+    <button mat-button (click)="addnewTweet()" color="primary">Insertar</button>
+    <button mat-button [routerLink]="['/registro']" color="primary">Registrarse</button>
+</mat-card>
