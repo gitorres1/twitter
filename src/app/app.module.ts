@@ -18,6 +18,7 @@ import { UsuarioComponent } from './sesion/usuario/usuario.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { LoginComponent } from './sesion/login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     DetalleTweetComponent,
     ListaTweetComponent,
     UsuarioComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
