@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserInformationService {
-  private username: string;
+  private username: string = "";
   private hobbie: string;
 
   constructor() { }
@@ -15,7 +15,7 @@ export class UserInformationService {
   }
 
   logOut() {
-    this.username = '';
+    this.username = "''";
     this.hobbie = '';
   }
 

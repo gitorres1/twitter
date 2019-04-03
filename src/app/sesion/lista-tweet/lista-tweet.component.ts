@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Tweet } from '../../model/Tweet';
 import { TweetsService } from '../../services/tweets.service';
+import { UserInformationService } from 'src/app/services/user-information.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-tweet',
@@ -14,8 +16,11 @@ export class ListaTweetComponent implements OnInit {
   autorT: string;
   textoT: string;
 
-  constructor(private tweetService: TweetsService) {
-
+  constructor(private tweetService: TweetsService, private userInfo: UserInformationService, private router: Router) {
+    if(this.userInfo.getUserName() == ""){
+      this.router.navigateByUrl('/login')
+    }
+    
     this.miTweet = new Tweet();
     tweetService.getAllTweets().subscribe(resp => {
       this.misTweets = resp;
