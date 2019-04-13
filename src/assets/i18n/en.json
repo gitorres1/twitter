@@ -1,0 +1,15 @@
+{
+  "TITLE_APP": "Fake twitter!",
+  "DESCRIPTION_APP": "This is a sample APP that you can use to learn the basics of Angular",
+  "REG_USER": "Sing in",
+  "CREATE_TWEET": "Create Tweet",
+  "LOOK_TWEET": "Look tweets",
+  "PASSWORD": "Password",
+  "USER_NAME": "UserName",
+  "EMAIL": "Email",
+  "LAST_NAME": "Name & Lastname",
+  "CELLPHONE": "Cellphone",
+  "LOG_IN": "Login",
+  "CANCEL": "Cancel",
+  "LANGS": "Languages"
+}

@@ -8,7 +8,8 @@ export const environment = {
   urlInsertaTweets: 'http://localhost:8080/addPublicacion',
   urlConsultaUsuario: 'http://localhost:8080/getUser',
   urlInsertarUsuario: 'http://localhost:8080/addUser',
-  urlConsultarTweetsUsuario: 'http://localhost:8080/getPublicacionUsuario'
+  urlConsultarTweetsUsuario: 'http://localhost:8080/getPublicacionUsuario',
+  login: 'http://localhost:8080/login'
 };
 
 /*

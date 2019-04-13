@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ListaTweetComponent implements OnInit {
 
-  miTweet: Tweet;
+
   misTweets: Array<Tweet>;
   autorT: string;
   textoT: string;
@@ -20,8 +20,8 @@ export class ListaTweetComponent implements OnInit {
     if(this.userInfo.getUserName() == ""){
       this.router.navigateByUrl('/login')
     }
-    
-    this.miTweet = new Tweet();
+
+
     tweetService.getAllTweets().subscribe(resp => {
       this.misTweets = resp;
     });
@@ -30,5 +30,5 @@ export class ListaTweetComponent implements OnInit {
   ngOnInit() {
   }
 
- 
+
 }

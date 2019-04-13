@@ -13,12 +13,16 @@ import { FormsModule } from '@angular/forms';
 import { MatDividerModule } from '@angular/material/divider';
 import { DetalleTweetComponent } from './sesion/detalle-tweet/detalle-tweet.component';
 import { ListaTweetComponent } from './sesion/lista-tweet/lista-tweet.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { UsuarioComponent } from './sesion/usuario/usuario.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { LoginComponent } from './sesion/login/login.component';
+import {TranslateModule} from '@ngx-translate/core';
+import {TranslateLoader} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,7 @@ import { LoginComponent } from './sesion/login/login.component';
     DetalleTweetComponent,
     ListaTweetComponent,
     UsuarioComponent,
-    LoginComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,9 +46,21 @@ import { LoginComponent } from './sesion/login/login.component';
     MatDividerModule,
     MatToolbarModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSelectModule,
+    TranslateModule.forRoot({
+      loader: {
+      provide: TranslateLoader,
+      useFactory: HttpLoaderFactory,
+      deps: [HttpClient]
+      }
+      })
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}

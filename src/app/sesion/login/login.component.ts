@@ -20,15 +20,15 @@ export class LoginComponent implements OnInit {
 
 
   logIn() {
-    let responseAut: any = this.authentication.autenticar(this.user_name, this.pass);
-    if (responseAut.message == 'Autenticacion correcta') {
-      let user = responseAut.user;
-      console.log(user);
-      this.userInfo.fillUserInfo(user.username, user.hobbie);
-      this.router.navigateByUrl('/home')
-    } else {
-      alert(responseAut.message)
-    }
+    this.authentication.autenticar(this.user_name, this.pass).then(responseAut=>{
+      if (responseAut.message == 'Autenticacion correcta') {
+        let user = responseAut.user;
+        this.userInfo.fillUserInfo(user.username, user.hobbie);
+        this.router.navigateByUrl('/home')
+      } else {
+        alert(responseAut.message)
+      }
+    });
 
   }
 

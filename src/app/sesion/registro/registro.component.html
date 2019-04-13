@@ -1,22 +1,22 @@
 <mat-card class="example-card">
     <mat-card-header>
-        <mat-card-title style="text-align: center">Registro</mat-card-title>
+        <mat-card-title style="text-align: center">{{ 'REG_USER' | translate }}</mat-card-title>
     </mat-card-header>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Nombre" [(ngModel)]="nombreUsuario">
+        <input matInput placeholder="{{ 'USER_NAME' | translate }}" [(ngModel)]="nombreUsuario">
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Apellido" [(ngModel)]="apellidoUsuario">
+        <input matInput placeholder="{{ 'LAST_NAME' | translate }}" [(ngModel)]="apellidoUsuario">
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input type="email" matInput placeholder="Correo" [(ngModel)]="correoUsuario">
+        <input type="email" matInput placeholder="{{ 'EMAIL' | translate }}" [(ngModel)]="correoUsuario">
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input type="password" matInput placeholder="Contraseña" [(ngModel)]="claveUsuario">
+        <input type="password" matInput placeholder="{{ 'PASSWORD' | translate }}" [(ngModel)]="claveUsuario">
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input type="number" matInput placeholder="Celular" [(ngModel)]="celularUsuario">
+        <input type="number" matInput placeholder="{{ 'CELLPHONE' | translate }}" [(ngModel)]="celularUsuario">
     </mat-form-field>
-    <button (click)="addUsuario()" mat-button color="primary">Registrarse</button>
-    <button [routerLink]="['home']" routerLinkActive="router-link-active" mat-button color="primary">Cancelar</button>
+    <button (click)="addUsuario()" mat-button color="primary">{{ 'REG_USER' | translate }}</button>
+    <button [routerLink]="['home']" routerLinkActive="router-link-active" mat-button color="primary">{{ 'CANCEL' | translate }}</button>
 </mat-card>

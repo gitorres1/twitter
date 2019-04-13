@@ -1,13 +1,13 @@
 <mat-card class="example-card">
   <mat-card-header>
-      <mat-card-title style="text-align: center">Logueo</mat-card-title>
+      <mat-card-title style="text-align: center">{{ 'LOG_IN' | translate }}</mat-card-title>
   </mat-card-header>
   <mat-form-field class="example-full-width">
-      <input matInput placeholder="Nombre de usuario" [(ngModel)]="user_name">
+      <input matInput placeholder="{{ 'USER_NAME' | translate }}" [(ngModel)]="user_name">
   </mat-form-field>
   <mat-form-field class="example-full-width">
-      <input matInput placeholder="Contraseña" type="password" [(ngModel)]="pass">
+      <input matInput placeholder="{{ 'PASSWORD' | translate }}" type="password" [(ngModel)]="pass">
   </mat-form-field>
 
-  <button (click)="logIn()" mat-button color="primary">Logueate :v</button>
+  <button (click)="logIn()" mat-button color="primary">{{ 'LOG_IN' | translate }}</button>
 </mat-card>
